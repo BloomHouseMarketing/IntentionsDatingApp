@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "2652170645",
+    "project_id": "intentions-dating-app",
+    "storage_bucket": "intentions-dating-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2652170645:android:700bdf8409db8686c42e9c",
+        "android_client_info": {
+          "package_name": "com.bloomhouse.intentions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2652170645-c01p6g304tmdlqkmsce6kk6b49vi2sc2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bloomhouse.intentions",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "2652170645-f4tifitgdpdspe59if43n1jlieac4con.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKigJJ3OKMT84ckmDFbodVe8X6NHGkgGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2652170645-f4tifitgdpdspe59if43n1jlieac4con.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

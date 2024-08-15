@@ -1,0 +1,8 @@
+
+export const USERLOGINDATA = 'USERLOGINDATA';
+export const USERLOGOUT = 'USERLOGOUT';
+export const ISUSERLOGIN = 'ISUSERLOGIN';
+export const LOADER = 'LOADER';
+export const CURRENTUSERPROFILE = 'CURRENTUSERPROFILE';
+export const ERRMSG = 'ERRMSG';
+export const SEARCHEDREST = 'SEARCHEDREST';

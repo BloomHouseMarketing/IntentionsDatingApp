@@ -1,4 +1,4 @@
-package com.intentions
+package com.bloomhouse.intentions
 
 import android.app.Application
 import com.facebook.react.PackageList

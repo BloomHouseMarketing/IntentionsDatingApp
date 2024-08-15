@@ -1,4 +1,4 @@
-package com.intentions
+package com.bloomhouse.intentions
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

@@ -1,0 +1,16 @@
+diff --git a/node_modules/react-native-elements/dist/tooltip/Tooltip.js b/node_modules/react-native-elements/dist/tooltip/Tooltip.js
+index ee577b7..72abe38 100644
+--- a/node_modules/react-native-elements/dist/tooltip/Tooltip.js
++++ b/node_modules/react-native-elements/dist/tooltip/Tooltip.js
+@@ -143,7 +143,10 @@ class Tooltip extends React.Component {
+         this.getElementPosition = () => {
+             const { skipAndroidStatusBar } = this.props;
+             this.renderedElement &&
+-                this.renderedElement.measure((_frameOffsetX, _frameOffsetY, width, height, pageOffsetX, pageOffsetY) => {
++                this.renderedElement.measure((_frameOffsetX, _frameOffsetY, width = 0,
++                    height = 0,
++                    pageOffsetX = 0,
++                    pageOffsetY = 0) => {
+                     this._isMounted &&
+                         this.setState({
+                             xOffset: pageOffsetX,
