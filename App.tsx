@@ -1,14 +1,4 @@
-/**
- * Boiler Plate React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
-import React from 'react';
+import React, { ReactNode } from 'react';
 import {
   KeyboardAvoidingView,
   View,
@@ -17,19 +7,25 @@ import {
   LogBox,
   StyleSheet,
 } from 'react-native';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {PersistGate} from 'redux-persist/integration/react';
-import Toast, {BaseToast, ErrorToast} from 'react-native-toast-message';
-import {Provider} from 'react-redux';
-import store, {persistor} from './src/redux';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { PersistGate } from 'redux-persist/integration/react';
+import Toast, { BaseToast, ErrorToast } from 'react-native-toast-message';
+import { Provider } from 'react-redux';
+import store, { persistor } from './src/redux';
 import Loader from './src/helpers/Loader';
 import MainNavigation from './src/routes';
-import {colors} from './src/utils';
+import { colors } from './src/utils';
+
 // ignore warnings
 LogBox.ignoreAllLogs();
 
+// TypeScript: Define the shape of props for Wrapper component
+interface WrapperProps {
+  children: ReactNode;
+}
+
 const toastConfig = {
-  success: props => (
+  success: (props: any) => (
     <BaseToast
       {...props}
       text1NumberOfLines={5}
@@ -45,7 +41,7 @@ const toastConfig = {
       }}
     />
   ),
-  error: props => (
+  error: (props: any) => (
     <ErrorToast
       {...props}
       text1NumberOfLines={5}
@@ -63,7 +59,7 @@ const toastConfig = {
   ),
 };
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Wrapper>
       <GestureHandlerRootView style={styles.container}>
@@ -86,8 +82,8 @@ const App = () => {
 
 export default App;
 
-const Wrapper = ({children}) => {
-  if (Platform.OS === 'ios')
+const Wrapper: React.FC<WrapperProps> = ({ children }) => {
+  if (Platform.OS === 'ios') {
     return (
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         <View style={[styles.container, styles.containerWhiteBackground]}>
@@ -95,6 +91,7 @@ const Wrapper = ({children}) => {
         </View>
       </KeyboardAvoidingView>
     );
+  }
   return (
     <View style={[styles.container, styles.containerWhiteBackground]}>
       {children}
